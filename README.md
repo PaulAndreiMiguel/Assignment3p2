@@ -44,6 +44,9 @@ runcmd:
   - sed -i -e '/^PermitRootLogin/s/^.*$/PermitRootLogin no/' /etc/ssh/sshd_config
   - systemctl restart ssh
   - systemctl restart systemd-journald
+  - ufw allow ssh
+  - ufw allow http
+  - ufw enable
 ```
 
 ### Example Curl Commands (curl.md)
